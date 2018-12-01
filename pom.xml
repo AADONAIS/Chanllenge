@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.mhc</groupId>
+		<artifactId>framework-dependencies</artifactId>
+        <version>1.2.1.RELEASE</version>
+	</parent>
+	<groupId>com.mhc.challenger</groupId>
+	<artifactId>challenger</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>challenger</name>
+	<description>challenger</description>
+	<properties>
+        <challenger.version>1.0.0-SNAPSHOT</challenger.version>
+    	<framework.version>1.2.1.RELEASE</framework.version>
+    	<business-support-common.version>1.1.0-SNAPSHOT</business-support-common.version>
+    	<apollo-client-mhc.version>1.1.1-SNAPSHOT</apollo-client-mhc.version>
+	</properties>
+	<modules>
+		<module>challenger-api</module>
+		<module>challenger-dal</module>
+		<module>challenger-service</module>
+		<!--
+		<module>challenger-client</module>
+		-->
+        <module>challenger-test</module>
+		<module>challenger-refer</module>
+	</modules>
+</project>

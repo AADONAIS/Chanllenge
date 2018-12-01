@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mhc.challenger.dal.dao.AssetOneAssetCatalogDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mhc.challenger.dal.domain.AssetOneAssetCatalog">
+        <id column="asset_catalog_id" property="assetCatalogId" />
+        <result column="asset_catalog_directory_num" property="assetCatalogDirectoryNum" />
+        <result column="asset_catalog_type" property="assetCatalogType" />
+        <result column="asset_catalog_brand" property="assetCatalogBrand" />
+        <result column="asset_catalog_version" property="assetCatalogVersion" />
+        <result column="asset_catalog_remark" property="assetCatalogRemark" />
+        <result column="asset_catalog_gmt_create" property="assetCatalogGmtCreate" />
+        <result column="asset_catalog_gmt_modified" property="assetCatalogGmtModified" />
+        <result column="asset_catalog_status" property="assetCatalogStatus" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        asset_catalog_id AS assetCatalogId, asset_catalog_directory_num AS assetCatalogDirectoryNum, asset_catalog_type AS assetCatalogType, asset_catalog_brand AS assetCatalogBrand, asset_catalog_version AS assetCatalogVersion, asset_catalog_remark AS assetCatalogRemark, asset_catalog_gmt_create AS assetCatalogGmtCreate, asset_catalog_gmt_modified AS assetCatalogGmtModified, asset_catalog_status AS assetCatalogStatus
+    </sql>
+
+    <select id="selectListAssetCatalog" resultType="com.mhc.challenger.dal.domain.AssetOneAssetCatalog">
+        select
+         <include refid="Base_Column_List" />
+         from asset_one_asset_catalog;
+    </select>
+
+   <select id="selectByIdcatalog" parameterType="int" resultType="com.mhc.challenger.dal.domain.AssetOneAssetCatalog">
+        select
+        <include refid="Base_Column_List"/>
+        from asset_one_asset_catalog
+       where
+       asset_catalog_id = #{id};
+    </select>
+</mapper>

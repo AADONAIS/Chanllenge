@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.mhc.challenger</groupId>
+		<artifactId>challenger</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>challenger-test</artifactId>
+	<name>challenger-test</name>
+	<description>challenger-test</description>
+	<dependencies>
+		<dependency>
+			<groupId>com.mhc.challenger</groupId>
+			<artifactId>challenger-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<!--
+		<dependency>
+			<groupId>com.mhc.challenger</groupId>
+			<artifactId>challenger-client</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		-->
+		
+		<dependency>
+			<groupId>com.mhc.challenger</groupId>
+			<artifactId>challenger-dal</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.mhc.challenger</groupId>
+			<artifactId>challenger-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		 <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-module-junit4</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-mockito</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-module-junit4-rule</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-classloading-xstream</artifactId>
+            <scope>test</scope>
+        </dependency>
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.mhc.challenger</groupId>
+			<artifactId>challenger</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

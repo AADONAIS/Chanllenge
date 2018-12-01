@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mhc.challenger.dal.dao.AssetOneAssetStorageDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mhc.challenger.dal.domain.AssetOneAssetStorage">
+        <id column="asset_storage_id" property="assetStorageId" />
+        <result column="asset_storage_source" property="assetStorageSource" />
+        <result column="asset_storage_rent_unit" property="assetStorageRentUnit" />
+        <result column="asset_storage_original_value" property="assetStorageOriginalValue" />
+        <result column="asset_storage_purchase_time" property="assetStoragePurchaseTime" />
+        <result column="asset_storage_supplier" property="assetStorageSupplier" />
+        <result column="asset_storage_start_time" property="assetStorageStartTime" />
+        <result column="asset_storage_rent" property="assetStorageRent" />
+        <result column="asset_storage_rent_start_time" property="assetStorageRentStartTime" />
+        <result column="asset_storage_rent_end_time" property="assetStorageRentEndTime" />
+        <result column="asset_storage_gmt_create" property="assetStorageGmtCreate" />
+        <result column="asset_storage_gmt_modified" property="assetStorageGmtModified" />
+        <result column="asset_storage_status" property="assetStorageStatus" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        asset_storage_id AS assetStorageId, asset_storage_source AS assetStorageSource, asset_storage_rent_unit AS assetStorageRentUnit, asset_storage_original_value AS assetStorageOriginalValue, asset_storage_purchase_time AS assetStoragePurchaseTime, asset_storage_supplier AS assetStorageSupplier, asset_storage_start_time AS assetStorageStartTime, asset_storage_rent AS assetStorageRent, asset_storage_rent_start_time AS assetStorageRentStartTime, asset_storage_rent_end_time AS assetStorageRentEndTime, asset_storage_gmt_create AS assetStorageGmtCreate, asset_storage_gmt_modified AS assetStorageGmtModified, asset_storage_status AS assetStorageStatus
+    </sql>
+
+</mapper>

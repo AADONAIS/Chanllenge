@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mhc.challenger.dal.dao.AssetOneAssetTypeDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mhc.challenger.dal.domain.AssetOneAssetType">
+        <id column="asset_type_id" property="assetTypeId" />
+        <result column="asset_type_name" property="assetTypeName" />
+        <result column="asset_type_unicode" property="assetTypeUnicode" />
+        <result column="asset_type_tstatus" property="assetTypeTstatus" />
+        <result column="asset_type_description" property="assetTypeDescription" />
+        <result column="asset_type_gmt_create" property="assetTypeGmtCreate" />
+        <result column="asset_type_gmt_modified" property="assetTypeGmtModified" />
+        <result column="asset_type_status" property="assetTypeStatus" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        asset_type_id AS assetTypeId, asset_type_name AS assetTypeName, asset_type_unicode AS assetTypeUnicode, asset_type_tstatus AS assetTypeTstatus, asset_type_description AS assetTypeDescription, asset_type_gmt_create AS assetTypeGmtCreate, asset_type_gmt_modified AS assetTypeGmtModified, asset_type_status AS assetTypeStatus
+    </sql>
+
+    <select id="selectListType" resultType="com.mhc.challenger.dal.domain.AssetOneAssetType">
+        select
+        <include refid="Base_Column_List"/>
+        from asset_one_asset_type ;
+    </select>
+</mapper>

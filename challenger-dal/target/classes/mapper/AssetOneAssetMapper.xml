@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mhc.challenger.dal.dao.AssetOneAssetDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mhc.challenger.dal.domain.AssetOneAsset">
+        <id column="asset_id" property="assetId" />
+        <result column="asset_num" property="assetNum" />
+        <result column="asset_source" property="assetSource" />
+        <result column="asset_supplier" property="assetSupplier" />
+        <result column="asset_purchase_or_rent_time" property="assetPurchaseOrRentTime" />
+        <result column="asset_origianl_value" property="assetOrigianlValue" />
+        <result column="asset_start_time" property="assetStartTime" />
+        <result column="asset_end_time" property="assetEndTime" />
+        <result column="asset_approval_num" property="assetApprovalNum" />
+        <result column="asset_receive_man" property="assetReceiveMan" />
+        <result column="asset_position" property="assetPosition" />
+        <result column="asset_department" property="assetDepartment" />
+        <result column="asset_transtype" property="assetTranstype" />
+        <result column="asset_receive_date" property="assetReceiveDate" />
+        <result column="asset_return_date" property="assetReturnDate" />
+        <result column="asset_astatus" property="assetAstatus" />
+        <result column="asset_assets_num" property="assetAssetsNum" />
+        <result column="asset_type" property="assetType" />
+        <result column="asset_gmt_create" property="assetGmtCreate" />
+        <result column="asset_gmt_modified" property="assetGmtModified" />
+        <result column="asset_status" property="assetStatus" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        asset_id AS assetId, asset_num AS assetNum, asset_source AS assetSource, asset_supplier AS assetSupplier, asset_purchase_or_rent_time AS assetPurchaseOrRentTime, asset_origianl_value AS assetOrigianlValue, asset_start_time AS assetStartTime, asset_end_time AS assetEndTime, asset_approval_num AS assetApprovalNum, asset_receive_man AS assetReceiveMan, asset_position AS assetPosition, asset_department AS assetDepartment, asset_transtype AS assetTranstype, asset_receive_date AS assetReceiveDate, asset_return_date AS assetReturnDate, asset_astatus AS assetAstatus, asset_assets_num AS assetAssetsNum, asset_type AS assetType, asset_gmt_create AS assetGmtCreate, asset_gmt_modified AS assetGmtModified, asset_status AS assetStatus
+    </sql>
+
+    <select id="selectByIdAsset" parameterType="int" resultType="com.mhc.challenger.dal.domain.AssetOneAsset">
+        select
+          <include refid="Base_Column_List"/>
+        from asset_one_asset
+        where asset_id = #{id}
+    </select>
+    <select id="selectListAssets" resultType="com.mhc.challenger.dal.domain.AssetOneAsset">
+        select
+        <include refid="Base_Column_List"/>
+        from asset_one_asset
+    </select>
+</mapper>
